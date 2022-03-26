@@ -4,7 +4,7 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Create a file ".env" in the project's root with followed information:
+## Create a file ".env" in the project's root with following information:
 
 - SandBox Cielo
 
