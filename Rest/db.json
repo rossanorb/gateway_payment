@@ -1,0 +1,34 @@
+{
+  "authorization": [
+    {
+      "reference": "pedido2",
+      "tid": "10012108222310362895",
+      "nsu": "882376848",
+      "authorizationCode": "142950",
+      "brandTid": "142950",
+      "dateTime": "2021-08-22T23:10:36-03:00",
+      "amount": 1000,
+      "cardBin": "544828",
+      "last4": "0007",
+      "returnCode": "00",
+      "returnMessage": "Success.",
+      "links": [
+        {
+          "method": "GET",
+          "rel": "transaction",
+          "href": "https://sandbox-erede.useredecloud.com.br/v1/transactions/10012108222310362895"
+        },
+        {
+          "method": "POST",
+          "rel": "refund",
+          "href": "https://sandbox-erede.useredecloud.com.br/v1/transactions/10012108222310362895/refunds"
+        },
+        {
+          "method": "PUT",
+          "rel": "capture",
+          "href": "https://sandbox-erede.useredecloud.com.br/v1/transactions/10012108222310362895"
+        }
+      ]
+    }
+  ]
+}

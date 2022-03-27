@@ -1,0 +1,98 @@
+@hostname = localhost:3000
+
+###
+POST http://{{hostname}}/payment-gateway/authorization
+Content-Type: application/json
+
+{
+    "capture": false,
+    "payment_type": "credit",
+    "order_id": "18",
+    "amount": 690,
+    //"installments": 12,
+    "card_holdername": "Levi Luiz Paulo Ramos",
+    "card_number": "5448280000000007",
+    "expiration_month": 1,
+    "expiration_year": 2028,            
+    "cvv": "123",
+    "card_brand":"Mastercard",
+    "soft_descriptor": "123456789ABCD",
+    "gateway": "erede"
+
+}
+
+###
+PUT http://{{hostname}}/payment-gateway/capture/10012109022127105684
+Content-Type: application/json
+
+{
+    "gateway": "erede",
+    "amount": 690
+}
+
+###
+GET http://{{hostname}}/payment-gateway/transactions?gateway=erede&tid=10012109022127105684
+Content-Type: application/json
+
+
+###
+PUT http://{{hostname}}/payment-gateway/transactions/10012109022127105684/refunds
+Content-Type: application/json
+
+{
+    "gateway": "erede",
+    "amount": 690
+}
+
+
+###
+GET http://{{hostname}}/payment-gateway/transactions/10012109022127105684/refunds?gateway=erede
+Content-Type: application/json
+
+
+
+
+
+
+###
+POST http://{{hostname}}/payment-gateway/authorization
+Content-Type: application/json
+
+{
+    "capture": true,
+    "payment_type": "CreditCard",
+    "order_id": "2014111703",
+    "amount": 15790,
+    "installments": 2,
+    "card_holdername": "Caroline Antônia Carvalho",
+    "card_number": "4556404514145675",
+    "expiration_month": 11,
+    "expiration_year": 2023,
+    "cvv": "599",
+    "card_brand":"Visa",
+    "soft_descriptor": "123456789ABCD",
+    "gateway": "cielo"
+}
+
+###
+PUT http://{{hostname}}/payment-gateway/capture/c4203103-2990-46fd-8ec7-8f52a33aea2c
+Content-Type: application/json
+
+{
+    "gateway": "cielo",
+    "amount": 15790
+}
+
+###
+GET http://{{hostname}}/payment-gateway/transactions?gateway=cielo&tid=c4203103-2990-46fd-8ec7-8f52a33aea2c
+Content-Type: application/json
+
+
+###
+PUT http://{{hostname}}/payment-gateway/transactions/2014111703/refunds
+Content-Type: application/json
+
+{
+    "gateway": "cielo",
+    "amount": 15790
+}
