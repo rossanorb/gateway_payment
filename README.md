@@ -8,10 +8,14 @@
 
 - SandBox Cielo
 
-    CIELO_MERCHANTID=your_merchantid
+    CIELO_MERCHANTID=your_merchantid 
+    
     CIELO_MERCHANTKEY=your_merchantkey
+    
     CIELO_API_QUERY_URL=https://apiquerysandbox.cieloecommerce.cielo.com.br
+    
     CIELO_API_URL=https://apisandbox.cieloecommerce.cielo.com.br
+    
     CIELO_PAYMENTID=fa09e9c5-a733-4238-a908-cedce9b14ec3
 
 - Rede
